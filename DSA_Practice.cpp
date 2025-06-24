@@ -380,5 +380,21 @@ using namespace std;
 
 
 
+// // for loop 
+
+// int main(){
+//      int count = 1;
+//      int limit;
+//      cout<<"Enter Limit : ";
+//      cin>>limit;
+//      for(int i=count;i<=limit;i++){
+//         cout<<i<<endl;
+//      }
+//      return 0;
+// }
+
+
+
+
 
 
