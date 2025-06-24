@@ -326,23 +326,38 @@ using namespace std;
 
 
 
-// Find Character Lowercase or Uppercase
-int main() {
-    char ch;
-    cout<<"Enter Character : ";
-    cin>>ch;
+// // Find Character Lowercase or Uppercase
+// int main() {
+//     char ch;
+//     cout<<"Enter Character : ";
+//     cin>>ch;
 
-    if(ch>='a'&&ch<='z'){
-        cout<<"LowerCase";
-    } else {
-        cout<<"UpperCase";
-    }
+//     if(ch>='a'&&ch<='z'){
+//         cout<<"LowerCase";
+//     } else {
+//         cout<<"UpperCase";
+//     }
 
-    return 0;
-}
-
-
+//     return 0;
+// }
 
 
 
 
+
+
+// // Ternary Operator - condition ? str1 : str2;
+
+// int main() {
+//     cout<<"Enter the Number : ";
+//     int n;
+//     cin>>n;
+
+//     cout<<(n >= 0 ? "Positive" : "Negative")<<endl;
+// }
+
+
+
+
+
+// LOOPS - while() loop
