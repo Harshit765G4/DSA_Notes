@@ -300,26 +300,26 @@ using namespace std;
 
 
 
+// // Vote Eligibility checker
+// int main() {
+//     int age;
+//     cout<<"Enter age of the Person : ";
+//     cin>>age;
 
-int main() {
-    int age;
-    cout<<"Enter age of the Person : ";
-    cin>>age;
+//     if(age<=0) {
+//         cout<<"Invalid Age"<<endl; 
+//         return 1;
+//     }
 
-    if(age<=0) {
-        cout<<"Invalid Age"<<endl; 
-        return 1;
-    }
+//     if(age>=18){
+//         cout<<"Person with age "<<age<<" has Right to Vote.";
+//     } else {
+//         cout<<"Person with age "<<age<<" is Not Eligible For voting.";
+//     }
 
-    if(age>=18){
-        cout<<"Person with age "<<age<<" has Right to Vote.";
-    } else {
-        cout<<"Person with age "<<age<<" is Not Eligible For voting.";
-    }
+//     return 0;
 
-    return 0;
-
-}
+// }
 
 
 
