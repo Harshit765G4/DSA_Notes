@@ -361,3 +361,17 @@ using namespace std;
 
 
 // LOOPS - while() loop
+
+// // Print the numbers from 1 to n
+// int main() {
+//     int count = 1;
+//     int limit;
+
+//     cout<<"Set Limit : ";
+//     cin>>limit;
+
+//     while(count<=limit){
+//         cout<<count<<endl;;
+//         count++;
+//     }
+// }
