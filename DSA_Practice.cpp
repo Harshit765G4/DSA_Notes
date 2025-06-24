@@ -257,41 +257,72 @@ using namespace std;
 
 
 
-// Simple Calculator
-int main(){
-    int a,b;
-    char opt;
-    cout<<"Enter a : ";
-    cin>>a;
+// // Simple Calculator
+// int main(){
+//     int a,b;
+//     char opt;
+//     cout<<"Enter a : ";
+//     cin>>a;
 
-    cout<<"Enter b : ";
-    cin>>b;
+//     cout<<"Enter b : ";
+//     cin>>b;
 
-    cout<<"Enter The Operator(+,-,*,/,%) : ";
-    cin>>opt;
+//     cout<<"Enter The Operator(+,-,*,/,%) : ";
+//     cin>>opt;
 
-    if(opt == '+'){
-        cout<<"Sum of Two Nos a and b is "<<a+b<<endl;
-    } else if(opt == '-'){
-        cout<<"Difference of Two Nos a and b is "<<a-b<<endl;
-    } else if (opt == '*'){
-        cout<<"Multiplication of Two Nos a and b is "<<a*b<<endl;
-    } else if(opt == '/'){
-        if(b != 0){
-            cout<<"Quotient of Two Nos a and b is "<<a/b<<endl;
-        } else {
-            cout<<"Divion by Zero is not Allowed"<<endl;
-        }
-    } else if(opt == '%'){
-        if(b != 0){
-            cout<<"Remainder of Two Nos a and b is "<<a%b<<endl;
-        } else {
-            cout<<"Modulo by Zero is not allowed"<<endl;
-        }
-    } else {
-        cout<<"Invalid Operator"<<endl;
-    }
+//     if(opt == '+'){
+//         cout<<"Sum of Two Nos a and b is "<<a+b<<endl;
+//     } else if(opt == '-'){
+//         cout<<"Difference of Two Nos a and b is "<<a-b<<endl;
+//     } else if (opt == '*'){
+//         cout<<"Multiplication of Two Nos a and b is "<<a*b<<endl;
+//     } else if(opt == '/'){
+//         if(b != 0){
+//             cout<<"Quotient of Two Nos a and b is "<<a/b<<endl;
+//         } else {
+//             cout<<"Divion by Zero is not Allowed"<<endl;
+//         }
+//     } else if(opt == '%'){
+//         if(b != 0){
+//             cout<<"Remainder of Two Nos a and b is "<<a%b<<endl;
+//         } else {
+//             cout<<"Modulo by Zero is not allowed"<<endl;
+//         }
+//     } else {
+//         cout<<"Invalid Operator"<<endl;
+//     }
     
+//     return 0;
+
+// }
+
+
+
+
+
+
+int main() {
+    int age;
+    cout<<"Enter age of the Person : ";
+    cin>>age;
+
+    if(age<=0) {
+        cout<<"Invalid Age"<<endl; 
+        return 1;
+    }
+
+    if(age>=18){
+        cout<<"Person with age "<<age<<" has Right to Vote.";
+    } else {
+        cout<<"Person with age "<<age<<" is Not Eligible For voting.";
+    }
+
     return 0;
 
 }
+
+
+
+
+
+
