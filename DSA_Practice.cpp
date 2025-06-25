@@ -397,4 +397,88 @@ using namespace std;
 
 
 
+// // sum of nos from 1 to n
+// int main() {
+//     int n,sum=0;
+//     cout<<"Enter the Number n : ";
+//     cin>>n;
+//     for( int i = 1;i <= n; i++ ){
+//         sum = sum + i;
+//     }
+//     cout<< "sum of nos from 1 to n : " << sum << endl ;
 
+//     return 0;
+// }
+
+
+
+
+
+
+// // sum of all odd nos from 1 to n
+// int main() {
+//     int n , sum = 0;
+//     cout<<"Enter the Number : ";
+//     cin>>n;
+
+//     for(int i = 1; i <= n; i+=2){
+//         sum = sum + i;
+//     }
+//     cout<<"Sum = "<< sum <<endl;
+
+//     return 0;
+
+// }
+
+
+
+
+
+
+
+
+// // d0 while loop
+
+// int main() {
+//     int n = 10;
+//     int i = 1;
+
+//     do{
+//         cout << i << " ";
+//         i++;
+//     } while (i <= n);
+
+//     cout<<endl;
+//     return 0;
+// }
+
+
+
+
+
+
+
+// Prime No Logic
+int main() {
+    int num;
+    bool isPrime = true;
+    cout<<"Enter the Number: ";
+    cin>>num;
+
+    if(num<=1){
+        isPrime = false;
+    } else {
+        for(int i = 2; i*i<=num;i++){
+            if(num%i==0){
+                isPrime = false;
+                break;
+            }
+        }
+    }
+
+    if (isPrime){
+        cout << "Prime No";
+    } else {
+        cout << "Not a Prime No";
+    }
+}
