@@ -458,27 +458,32 @@ using namespace std;
 
 
 
-// Prime No Logic
-int main() {
-    int num;
-    bool isPrime = true;
-    cout<<"Enter the Number: ";
-    cin>>num;
+// // Prime No Logic
+// int main() {
+//     int num;
+//     bool isPrime = true;
+//     cout<<"Enter the Number: ";
+//     cin>>num;
 
-    if(num<=1){
-        isPrime = false;
-    } else {
-        for(int i = 2; i*i<=num;i++){
-            if(num%i==0){
-                isPrime = false;
-                break;
-            }
-        }
-    }
+//     if(num<=1){
+//         isPrime = false;
+//     } else {
+//         for(int i = 2; i*i<=num;i++){
+//             if(num%i==0){
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+//     }
 
-    if (isPrime){
-        cout << "Prime No";
-    } else {
-        cout << "Not a Prime No";
-    }
-}
+//     if (isPrime){
+//         cout << "Prime No";
+//     } else {
+//         cout << "Not a Prime No";
+//     }
+// }
+
+
+
+
+
