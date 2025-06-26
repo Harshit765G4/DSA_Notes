@@ -487,3 +487,126 @@ using namespace std;
 
 
 
+// // Nested Loop
+// int main(){
+//     int n,m;
+//     cout<<"Enter n and m : ";
+//     cin>>n>>m;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<m;j++){
+//             cout<<"* ";
+//         }
+//         cout<<endl;
+//     } 
+// }
+
+
+
+
+
+
+// Patterns - Square Pattern
+
+
+// // 1 2 3 4 
+// // 1 2 3 4
+// // 1 2 3 4
+// // 1 2 3 4
+
+// int main() {
+//     int n=4;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=n;j++){
+//             cout<<j<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+
+
+
+
+
+// // * * * * 
+// // * * * *
+// // * * * *
+// // * * * *
+
+// int main(){
+//     int n = 4;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<"* ";
+//         }
+//         cout<<endl;
+//     }      
+// }
+
+
+
+
+
+
+// // A B C D 
+// // A B C D
+// // A B C D
+// // A B C D
+
+// int main(){
+//     int n = 4;
+//     for(int i = 0; i<n;i++){
+//         char ch=65;
+//         for(int j=0;j<n;j++){
+//             cout<<ch<<" ";
+//             ch++;
+//         }
+//         cout<<endl;
+//     }
+// }
+
+
+
+
+
+// // 1 2 3 
+// // 4 5 6
+// // 7 8 9
+
+// int main(){
+//     int n=3;
+//     int num = 1;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<num<<" ";
+//             num++;
+//         }
+//         cout<<endl;
+//     }
+// }
+
+
+
+
+
+
+// // A B C 
+// // D E F
+// // G H I
+
+// int main() {
+//     int n = 3;
+//     char ch = 65;
+//     for(int i = 0;i<n;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<ch<<" ";
+//             ch++;
+//         }
+//         cout<<endl;
+//     }
+// }
+
+
+
+
+
+
