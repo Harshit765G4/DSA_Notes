@@ -859,7 +859,7 @@ using namespace std;
 
 
 
-// Hollow Diamond Patter
+// Hollow Diamond Pattern
 
 
 //       * 
@@ -949,6 +949,7 @@ using namespace std;
 
 
 
+// Butterfly Pattern Logic
 
 // *                    *  
 // *  *              *  *  
