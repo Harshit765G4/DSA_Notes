@@ -1175,37 +1175,101 @@ using namespace std;
 
 
 
-// WAF to print all prime numbers from 1 to N.
+// // WAF to print all prime numbers from 2 to N.
 
-bool isPrime(int num){
-   if(num<=1){
-      return false;
-   } else {
-      for(int i = 2; i * i <= num; i++){
-         if(num%i==0){
-            return false;
-         }
-      }
-   }
-   return true;
-}
+// bool isPrime(int num){
+//    if(num<=1){
+//       return false;
+//    } else {
+//       for(int i = 2; i * i <= num; i++){
+//          if(num%i==0){
+//             return false;
+//          }
+//       }
+//    }
+//    return true;
+// }
 
-void printPrime(int num){
-   cout<<"Prime No. from 1 to "<<num<<" are: ";
-   for(int i = 1;i<=num;i++){
-      if(isPrime(i)){
-         cout<<i<<" ";
-      }
-   }
-   cout<<endl;
-}
+// void printPrime(int num){
+//    cout<<"Prime No. from 1 to "<<num<<" are: ";
+//    for(int i = 1;i<=num;i++){
+//       if(isPrime(i)){
+//          cout<<i<<" ";
+//       }
+//    }
+//    cout<<endl;
+// }
 
-int main(){
-   int num;
-   cout<<"Enter the value of num: ";
-   cin>>num;
+// int main(){
+//    int num;
+//    cout<<"Enter the value of num: ";
+//    cin>>num;
 
-   printPrime(num);
+//    printPrime(num);
 
-   return 0;
-}
+//    return 0;
+// }
+
+
+
+// // WAF to print nth Fibonacci
+
+// int fibonacci(int n){
+   // if(n<=0) return 0;
+   // if(n==1) return 1;
+
+   // int a = 0,b = 1, fib;
+
+   // for(int i=2;i<=n;i++){
+   //    fib = a + b;
+   //    a = b;
+   //    b = fib;
+   // }
+   // return b;
+// }
+
+// int main(){
+//    int n;
+//    cout<<"Enter the nth Position: ";
+//    cin>>n;
+
+//    cout<<n<<"th fibonacci number is: "<<fibonacci(n)<<endl;
+
+//    return 0;
+// }
+
+
+
+
+// // Fibonacci series print
+
+// void printFibonacci(int n){
+//     if(n <= 0) return;
+
+//     int a = 0, b = 1;
+
+//     for(int i = 0; i < n; i++){
+//         cout << a << " ";
+//         int fib = a + b;
+//         a = b;
+//         b = fib;
+//     }
+//     cout << endl;
+// }
+
+// int main(){
+//     int n;
+//     cout << "Enter the number of terms: ";
+//     cin >> n;
+
+//     cout << "Series: ";
+//     printFibonacci(n);
+
+//     return 0;
+// }
+
+
+
+
+
+
