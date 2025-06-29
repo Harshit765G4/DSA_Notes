@@ -1118,25 +1118,54 @@ using namespace std;
 
 
 
-// Calculate nCr binomial coefficeint for n and r
+// // Calculate nCr binomial coefficeint for n and r
 
-double factorial(int n){
-   double fact = 1;
-   for(int i=1;i<=n;i++){
-      fact = fact*i;
+// double factorial(int n){
+//    double fact = 1;
+//    for(int i=1;i<=n;i++){
+//       fact = fact*i;
+//    }
+//    return fact;
+// }
+
+// double nCr(int n,int r){
+//    double binomial = factorial(n) / (factorial(r) * factorial(n - r));
+//    return binomial;
+// }
+
+// int main(){
+//    int n , r;
+//    cout<<"Enter n and r to calculate nCr: ";
+//    cin>>n>>r;
+//    double nCrBinomial = nCr(n,r);
+//    cout<<nCrBinomial;
+// }
+
+
+
+
+
+int primeCheck(int num){
+   int isPrime=true;
+   if(num<=1){
+      isPrime=false;
+   } else {
+      for(int i = 2; i * i <= num; i++){
+         if(num%i==0){
+            isPrime=false;
+         }
+      }
    }
-   return fact;
-}
-
-double nCr(int n,int r){
-   double binomial = factorial(n) / (factorial(r) * factorial(n - r));
-   return binomial;
+   if(isPrime){
+      cout<<"It is a Prime No.";
+   } else {
+      cout<<"It is not a Prime No.";
+   }
 }
 
 int main(){
-   int n , r;
-   cout<<"Enter n and r to calculate nCr: ";
-   cin>>n>>r;
-   double nCrBinomial = nCr(n,r);
-   cout<<nCrBinomial;
+   int num;
+   cout<<"Enter The Number: ";
+   cin>>num;
+   primeCheck(num);
 }
