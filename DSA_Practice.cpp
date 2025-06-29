@@ -1144,28 +1144,68 @@ using namespace std;
 
 
 
+// // WAF to check if it is a prime no or not
 
-int primeCheck(int num){
-   int isPrime=true;
+// int primeCheck(int num){
+//    int isPrime=true;
+   // if(num<=1){
+   //    isPrime=false;
+   // } else {
+   //    for(int i = 2; i * i <= num; i++){
+   //       if(num%i==0){
+   //          isPrime=false;
+   //       }
+   //    }
+   // }
+//    if(isPrime){
+//       cout<<"It is a Prime No.";
+//    } else {
+//       cout<<"It is not a Prime No.";
+//    }
+// }
+
+// int main(){
+//    int num;
+//    cout<<"Enter The Number: ";
+//    cin>>num;
+//    primeCheck(num);
+// }
+
+
+
+
+
+// WAF to print all prime numbers from 1 to N.
+
+bool isPrime(int num){
    if(num<=1){
-      isPrime=false;
+      return false;
    } else {
       for(int i = 2; i * i <= num; i++){
          if(num%i==0){
-            isPrime=false;
+            return false;
          }
       }
    }
-   if(isPrime){
-      cout<<"It is a Prime No.";
-   } else {
-      cout<<"It is not a Prime No.";
+   return true;
+}
+
+void printPrime(int num){
+   cout<<"Prime No. from 1 to "<<num<<" are: ";
+   for(int i = 1;i<=num;i++){
+      if(isPrime(i)){
+         cout<<i<<" ";
+      }
    }
+   cout<<endl;
 }
 
 int main(){
    int num;
-   cout<<"Enter The Number: ";
+   cout<<"Enter the value of num: ";
    cin>>num;
-   primeCheck(num);
+
+   printPrime(num);
+
+   return 0;
 }
