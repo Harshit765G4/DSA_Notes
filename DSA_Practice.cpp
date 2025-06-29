@@ -961,33 +961,33 @@ using namespace std;
 // *                    *
 
 
-int main(){
-    int n=4;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<i+1;j++){
-            cout<<"*  ";
-        }
-        for(int j=0;j<2*(n-i-1);j++){
-            cout<<"   ";
-        }
-        for(int j=0;j<i+1;j++){
-            cout<<"*  ";
-        }
-        cout<<endl;
-    }
-    for(int i=n;i>0;i--){
-        for(int j=0;j<i;j++){
-            cout<<"*  ";
-        }
-        for(int j=2*(n-i);j>0;j--){
-            cout<<"   ";
-        }
-        for(int j=0;j<i;j++){
-            cout<<"*  ";
-        }
-    cout<<endl;
-    }
-}
+// int main(){
+//     int n=4;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<i+1;j++){
+//             cout<<"*  ";
+//         }
+//         for(int j=0;j<2*(n-i-1);j++){
+//             cout<<"   ";
+//         }
+//         for(int j=0;j<i+1;j++){
+//             cout<<"*  ";
+//         }
+//         cout<<endl;
+//     }
+//     for(int i=n;i>0;i--){
+//         for(int j=0;j<i;j++){
+//             cout<<"*  ";
+//         }
+//         for(int j=2*(n-i);j>0;j--){
+//             cout<<"   ";
+//         }
+//         for(int j=0;j<i;j++){
+//             cout<<"*  ";
+//         }
+//     cout<<endl;
+//     }
+// }
 
 
 
@@ -1003,5 +1003,140 @@ int main(){
 // }
 
 
+// Hello Function
 
- 
+// void printHello(){
+//     cout<<"Hello"<<endl;
+// } 
+
+// int main(){
+//     printHello();
+//     return 0;
+// }
+
+
+
+
+// // sum of 2 numbers
+
+// double sum(double a , double b){
+//     double s = a + b;
+//     return s;
+// }
+
+// int main(){
+//     cout<<sum(10.354,52.65)<<endl;
+//     return 0;
+// }
+
+
+
+
+
+// // min of 2 nos
+
+// int minOfTwo(int a, int b){
+//     if(a<b){
+//         return a;
+//     } else {
+//         return b;
+//     }
+// }
+
+// int main(){
+//     int a,b;
+//     cout<<"Enter a and b: ";
+//     cin>>a>>b;
+//     cout<<"Minimum of 2 nums is : "<<minOfTwo(a,b);
+//     return 0;
+// }
+
+
+
+
+
+
+
+// // sum of NOs from 1 to n
+
+// int sumN(int n){
+//    int sum=0;
+//    for(int i=1;i<=n;i++){
+//       sum=sum+i;
+//    }
+//    return sum;
+// }
+// int main(){
+//    int sum = sumN(10);
+//    cout<<sum;
+// }
+
+
+
+
+// // N factorial
+
+// int factN(int n){
+//    int fact=1;
+//    for(int i=1;i<=n;i++){
+//       fact = fact*i;
+//    }
+//    return fact;
+// }
+
+// int main(){
+//    int factorial = factN(5);
+//    cout<<factorial;
+// }
+
+
+
+
+
+
+// // Calculate sum of digits of a number
+
+// int digitSum(int num){
+//    int dSum = 0;
+//    while(num>0){
+//       int lastDig = num % 10;
+//       num = num / 10;
+//       dSum += lastDig;
+//    }
+//    cout<<"Sum is "<< dSum;
+// }
+
+// int main(){
+//    int n;
+//    cout<<"Enter number: ";
+//    cin>>n;
+//    digitSum(n);
+// }
+
+
+
+
+
+
+// Calculate nCr binomial coefficeint for n and r
+
+double factorial(int n){
+   double fact = 1;
+   for(int i=1;i<=n;i++){
+      fact = fact*i;
+   }
+   return fact;
+}
+
+double nCr(int n,int r){
+   double binomial = factorial(n) / (factorial(r) * factorial(n - r));
+   return binomial;
+}
+
+int main(){
+   int n , r;
+   cout<<"Enter n and r to calculate nCr: ";
+   cin>>n>>r;
+   double nCrBinomial = nCr(n,r);
+   cout<<nCrBinomial;
+}
