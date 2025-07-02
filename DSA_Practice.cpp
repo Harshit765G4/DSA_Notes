@@ -1295,3 +1295,77 @@ using namespace std;
 
 
 
+// // Decimal to binary series from 1 to n
+// double Dec2Bin(int num){
+//     double ans = 0;
+//     int pow = 1;
+//     while(num > 0){
+//         int rem = num % 2;
+//         num = num / 2;
+//         ans += (rem*pow);
+//         pow = pow * 10;
+//     }
+//     return ans;
+// }
+// int main(){
+//     for(int i=1;i<=10;i++){
+//         cout<<Dec2Bin(i)<<endl;
+//     }
+//     return 0;
+// }
+
+
+
+
+
+
+
+// // Binary to Decimal
+
+// int Bin2Dec(int binNum){
+// 	int ans = 0, pow = 1;
+// 	while(binNum>0){
+// 		int rem = binNum%10;
+// 		ans += (rem*pow);
+// 		binNum = binNum/10;
+// 		pow *= 2;
+// 	}
+// 	return ans;
+// }
+// int main(){
+// 	int binNum = 101010;
+// 	cout<<Bin2Dec(binNum);
+// 	return 0;
+// }
+
+
+
+
+// // Bitwise Operator
+
+// int main(){
+// 	cout<<(6&10)<<endl;
+// }
+
+// int main(){
+// 	cout<<(6|10)<<endl;
+// }
+
+// int main(){
+// 	cout<<(6^10)<<endl;
+// }
+
+// int main(){
+// 	cout<<(10<<2)<<endl;
+// }
+
+// int main(){
+// 	cout<<(10>>1)<<endl;
+// }
+
+
+
+
+
+
+
