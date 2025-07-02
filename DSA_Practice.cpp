@@ -1369,3 +1369,11 @@ using namespace std;
 
 
 
+// WAF to Reverse an integer n
+
+int revInt(int n){
+	
+}
+int main(){
+
+}
