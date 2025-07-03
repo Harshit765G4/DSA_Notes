@@ -38,7 +38,8 @@ using namespace std;
 // int main(){
 //    int arr[] = {5,15,22,1,-15,24};
 //    int smallest = INT_MAX;
-//    for(int i=0;i<sizeof(arr);i++){
+//    int n = sizeof(arr)/sizeof(arr[0]);
+//    for(int i=0; i<n; i++){
 //       if(arr[i]<smallest){
 //          smallest = arr[i];
 //       }
@@ -49,14 +50,19 @@ using namespace std;
 
 
 
-// largest Element
-int main(){
-   int arr[] = {5,15,22,1,-15,24};
-   int largest = INT_MIN;
-   for(int i=0;i<sizeof(arr);i++){
-      if(arr[i]>largest){
-         largest = arr[i];
-      }
-   }
-   cout<<largest;
-}
+// // largest Element
+// int main(){
+//    int arr[] = {5,15,22,1,-15,24};
+//    int largest = INT_MIN;
+//    int n = sizeof(arr)/sizeof(arr[0]);
+//    for(int i=0; i<n; i++){
+//       if(arr[i] > largest){
+//          largest = arr[i];
+//       }
+//    }
+//    cout << largest;
+// }  cout << largest;
+// }
+
+
+
