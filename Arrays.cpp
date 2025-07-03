@@ -66,3 +66,22 @@ using namespace std;
 
 
 
+
+
+
+// // Sum of elements of an array
+// int main(){
+//    int size = 5, sum = 0;
+//    int arr[size] = {45,75,86,94,27};
+//    for(int i = 0; i < size; i++){
+//       sum = sum + arr[i];
+//    }
+//    cout<<sum<<endl;
+//    return 0;
+// }
+
+
+
+
+
+
