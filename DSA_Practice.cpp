@@ -1371,9 +1371,18 @@ using namespace std;
 
 // WAF to Reverse an integer n
 
-int revInt(int n){
-	
+int revInt(int num){
+	int remainder, revInteger = 0;
+	while(num > 0){
+		remainder =	num % 10;
+		num = num / 10;
+		revInteger = (revInteger * 10) + remainder;
+	}
+	return revInteger;
 }
 int main(){
-
+	int num;
+	cout<<"Enter num: ";
+	cin>>num;
+	cout<<revInt(num)<<endl;
 }
