@@ -1,5 +1,4 @@
-#include<iostream>
-#include<climits>
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -61,10 +60,7 @@ using namespace std;
 //       }
 //    }
 //    cout << largest;
-// }  cout << largest;
 // }
-
-
 
 
 
@@ -85,3 +81,17 @@ using namespace std;
 
 
 
+// Other Way to find smallest and largest usin min , max function
+
+int main(){
+   int arr[] = {5,15,22,1,-15,24};
+   int largest = INT_MIN;
+   int smallest = INT_MAX;
+   int n = sizeof(arr)/sizeof(arr[0]);
+   for(int i=0; i<n; i++){
+      largest = max(arr[i],largest);
+      smallest = min(arr[i],smallest);
+   }
+   cout<<"Largest: "<<largest<<endl;
+   cout<<"Smallest: "<<smallest<<endl;
+}
