@@ -130,7 +130,7 @@ using namespace std;
 //          smallestIndex = i;
 //       }
 //    }
-//    cout << "Index of Smallest Element: " << smallestIndex;
+//    cout << "Index of Smallest Element: " << smallestIndex<<endl;
 // }
 
 
@@ -152,9 +152,39 @@ using namespace std;
 //    for(int i = 0 ; i < 3 ; i++){
 //       cout<<arr[i]<<" ";
 //    }
+//    cout<<endl;
+//    return 0;
+// }
+
+
+
+
+
+
+
+// // Linear search
+
+// int linearSearch(int arr[],int size,int target){
+//    for(int i = 0; i < size; i++){
+//       if(arr[i]==target){
+//          return i;
+//       }
+//    }
+//    return -1;
+// }
+// int main(){
+//    int arr[] = {4,2,7,8,1,2,5};
+//    int size = 7;
+//    int target = 5;
+//    cout << "Target Found at: " << linearSearch(arr,size,target);
 
 //    return 0;
 // }
+
+
+
+
+
 
 
 
