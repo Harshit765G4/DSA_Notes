@@ -81,17 +81,80 @@ using namespace std;
 
 
 
-// Other Way to find smallest and largest usin min , max function
+// // Other Way to find smallest and largest usin min , max function
 
-int main(){
-   int arr[] = {5,15,22,1,-15,24};
-   int largest = INT_MIN;
-   int smallest = INT_MAX;
-   int n = sizeof(arr)/sizeof(arr[0]);
-   for(int i=0; i<n; i++){
-      largest = max(arr[i],largest);
-      smallest = min(arr[i],smallest);
-   }
-   cout<<"Largest: "<<largest<<endl;
-   cout<<"Smallest: "<<smallest<<endl;
-}
+// int main(){
+//    int arr[] = {5,15,22,1,-15,24};
+//    int largest = INT_MIN;
+//    int smallest = INT_MAX;
+//    int n = sizeof(arr)/sizeof(arr[0]);
+//    for(int i=0; i<n; i++){
+//       largest = max(arr[i],largest);
+//       smallest = min(arr[i],smallest);
+//    }
+//    cout<<"Largest: "<<largest<<endl;
+//    cout<<"Smallest: "<<smallest<<endl;
+// }
+
+
+
+
+
+
+// // Index of Largest Element
+// int main(){
+//    int arr[] = {2, 5, 8, 3, 45, 12};
+//    int size = sizeof(arr) / sizeof(arr[0]);
+//    int largestIndex = 0;
+//    for(int i = 1; i < size; i++){
+//       if(arr[i] > arr[largestIndex]){
+//          largestIndex = i;
+//       }
+//    }
+//    cout << "Index of Largest Element: " << largestIndex;
+// }
+
+
+
+
+
+
+
+// // Index of Smallest Element
+// int main(){
+//    int arr[] = {2, 5, 8, 1, 45, -12};
+//    int size = sizeof(arr) / sizeof(arr[0]);
+//    int smallestIndex = 0;
+//    for(int i = 1; i < size; i++){
+//       if(arr[i] < arr[smallestIndex]){
+//          smallestIndex = i;
+//       }
+//    }
+//    cout << "Index of Smallest Element: " << smallestIndex;
+// }
+
+
+
+
+
+
+// // Change array elements and Demonstration of pass by reference
+// void  changeArray(int arr[],int size){
+//    for(int i = 0; i<size; i++){
+//       arr[i] = 2*arr[i];
+//    }
+// }
+// int main(){
+//    int arr[] = {1,2,3};
+
+//    changeArray(arr,3);
+
+//    for(int i = 0 ; i < 3 ; i++){
+//       cout<<arr[i]<<" ";
+//    }
+
+//    return 0;
+// }
+
+
+
