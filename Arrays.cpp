@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<vector>          //header file for vector in c++
 using namespace std;
 
 
