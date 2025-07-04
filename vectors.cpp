@@ -68,13 +68,33 @@ using namespace std;
 
 
 
-// size and capacity
+// // size and capacity
 
+// int main(){
+//    vector<int> vec;
+//    vec.push_back(5);
+//    vec.push_back(15);
+//    vec.push_back(25);
+//    cout<<"Size: "<<vec.size()<<endl;
+//    cout<<"Capacity: "<<vec.capacity()<<endl;
+// }
+
+
+
+
+
+
+// Single Number
+
+int singleNumber(vector<int>& nums){
+   int sNum = 0;
+   for(int val: nums){
+      sNum ^= val;
+   }
+   return sNum;
+}
 int main(){
-   vector<int> vec;
-   vec.push_back(5);
-   vec.push_back(15);
-   vec.push_back(25);
-   cout<<"Size: "<<vec.size()<<endl;
-   cout<<"Capacity: "<<vec.capacity()<<endl;
+   vector<int> nums={4,1,2,1,2};
+   cout<<"Single Number: "<<singleNumber(nums);
+   return 0;
 }
