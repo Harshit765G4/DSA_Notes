@@ -147,19 +147,81 @@ using namespace std;
 
 
 
-// Optimal Approach of Max. SubArray Sum Using Kadane's Algorithm
-int main(){
-   int arr[] = {-3, -4, -5, -4 ,-1, -7, -8};
-   int currSum = 0;
-   int maxSum = INT_MIN;
-   int size = sizeof(arr) / sizeof(arr[0]);
-   for(int i=0;i<size;i++){
-      currSum += arr[i];
-      maxSum = max(currSum,maxSum);
-      if(currSum<0){
-         currSum = 0;
-      }
-   }
-   cout<<maxSum<<endl;
-   return 0;
-}
+// // Optimal Approach of Max. SubArray Sum Using Kadane's Algorithm
+// int main(){
+//    int arr[] = {-3, -4, -5, -4 ,-1, -7, -8};
+//    int currSum = 0;
+//    int maxSum = INT_MIN;
+//    int size = sizeof(arr) / sizeof(arr[0]);
+//    for(int i=0;i<size;i++){
+//       currSum += arr[i];
+//       maxSum = max(currSum,maxSum);
+//       if(currSum<0){
+//          currSum = 0;
+//       }
+//    }
+//    cout<<maxSum<<endl;
+//    return 0;
+// }
+
+
+
+
+
+
+
+
+
+// // Pair Sum Question-Brute Force Approach
+
+// vector<int> pairSum(vector<int>& nums, int target) {
+//    vector<int> ans;
+//    int sz = nums.size();
+
+//    for (int i = 0; i < sz; i++) {
+//       for (int j = i + 1; j < sz; j++) {
+//          if (nums[i] + nums[j] == target) {
+//             ans.push_back(i);
+//             ans.push_back(j);
+//             return ans;
+//          }
+//       }
+//    }
+//    ans.push_back(-1);
+//    return ans;
+// }
+
+
+// // Prints the Value of the Pairs
+// int main() {
+//    vector<int> nums = {2, 7, 11, 15};
+//    int target = 17;
+
+//    vector<int> ans = pairSum(nums, target);
+//    for (int idx : ans) {
+//       if (idx == -1) {
+//          cout << idx;
+//       } else {
+//          cout << nums[idx] << " ";
+//       }
+//    }
+//    return 0;
+// }
+
+
+// // Prints the index of the Pair Sum Values
+// int main() {
+//    vector<int> nums = {2, 7, 11, 15};
+//    int target = 17;
+
+//    vector<int> ans = pairSum(nums, target);
+//    cout<<"Index of the Pair Sum Values: "<<ans[0]<<", "<<ans[1]<<endl;
+//    return 0;
+// }
+
+
+
+
+
+// Optimal Approach of Piar Sum
+
