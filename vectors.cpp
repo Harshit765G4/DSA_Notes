@@ -126,21 +126,40 @@ using namespace std;
 
 
 
-// Maximum subarray sum
+// // Maximum subarray sum
 
+// int main(){
+//    int n=7;
+//    int arr[]={3,-4,5,4,-1,7,-8};
+//    int maxSum = INT_MIN;
+//    for(int st=0;st<n;st++){
+//       int currSum = 0;
+//       for(int end=st;end<n;end++){
+//          currSum += arr[end];
+//          maxSum = max(currSum,maxSum);
+//       }
+//    }
+//    cout<<"Maximum Subarray Sum: "<<maxSum;
+// }
+
+
+
+
+
+
+// Optimal Approach of Max. SubArray Sum Using Kadane's Algorithm
 int main(){
-   int n=7;
-   int arr[]={3,-4,5,4,-1,7,-8};
+   int arr[] = {-3, -4, -5, -4 ,-1, -7, -8};
+   int currSum = 0;
    int maxSum = INT_MIN;
-   for(int st=0;st<n;st++){
-      int currSum = 0;
-      for(int end=st;end<n;end++){
-         currSum += arr[end];
-         maxSum = max(currSum,maxSum);
+   int size = sizeof(arr) / sizeof(arr[0]);
+   for(int i=0;i<size;i++){
+      currSum += arr[i];
+      maxSum = max(currSum,maxSum);
+      if(currSum<0){
+         currSum = 0;
       }
    }
-   cout<<"Maximum Subarray Sum: "<<maxSum;
+   cout<<maxSum<<endl;
+   return 0;
 }
-
-
-
