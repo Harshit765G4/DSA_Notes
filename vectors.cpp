@@ -84,17 +84,63 @@ using namespace std;
 
 
 
-// Single Number
+// // Single Number
 
-int singleNumber(vector<int>& nums){
-   int sNum = 0;
-   for(int val: nums){
-      sNum ^= val;
-   }
-   return sNum;
-}
+// int singleNumber(vector<int>& nums){
+//    int sNum = 0;
+//    for(int val: nums){
+//       sNum ^= val;
+//    }
+//    return sNum;
+// }
+// int main(){
+//    vector<int> nums={4,1,2,1,2};
+//    cout<<"Single Number: "<<singleNumber(nums);
+//    return 0;
+// }
+
+
+
+
+
+
+// // linear search using vector
+
+// int linearSearchVector(vector<int>& arr, int target){
+//    for (int i = 0; i < arr.size(); i++) {
+//       if (arr[i] == target) {
+//          return i;
+//       }
+//    }
+//    return -1;
+// }
+// int main(){
+//    vector<int> arr = {5,2,1,7,6,8,4};
+//    int target = 8;
+//    cout<<"Target found at Index: "<<linearSearchVector(arr,target);
+//    return 0;
+// }
+
+
+
+
+
+
+// Maximum subarray sum
+
 int main(){
-   vector<int> nums={4,1,2,1,2};
-   cout<<"Single Number: "<<singleNumber(nums);
-   return 0;
+   int n=7;
+   int arr[]={3,-4,5,4,-1,7,-8};
+   int maxSum = INT_MIN;
+   for(int st=0;st<n;st++){
+      int currSum = 0;
+      for(int end=st;end<n;end++){
+         currSum += arr[end];
+         maxSum = max(currSum,maxSum);
+      }
+   }
+   cout<<"Maximum Subarray Sum: "<<maxSum;
 }
+
+
+
