@@ -223,7 +223,7 @@ using namespace std;
 
 
 
-// // Better Optimal Approach of Piar Sum
+// // Optimized Approach of Piar Sum
 
 // vector<int> pairSum(vector<int> nums,int target){
 //    vector<int> ans;
