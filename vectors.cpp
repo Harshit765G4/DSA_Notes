@@ -252,3 +252,20 @@ using namespace std;
 //    cout<<"Index of the Pair Sum Values: "<<ans[0]<<", "<<ans[1]<<endl;
 //    return 0;
 // }
+
+
+
+
+
+
+
+
+
+// Majority Element
+// leetcode
+
+
+
+
+
+
