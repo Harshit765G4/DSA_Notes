@@ -263,3 +263,10 @@ using namespace std;
 
 // Majority Element
 // leetcode
+
+
+
+
+
+
+//Leetcode 50 Power(x,n)
