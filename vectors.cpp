@@ -270,3 +270,10 @@ using namespace std;
 
 
 //Leetcode 50 Power(x,n)
+
+
+
+
+// leetcode best time to buy and sell stock
+
+// arr[]={7,1,5,3,6,4};
