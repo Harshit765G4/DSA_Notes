@@ -6,3 +6,13 @@ using namespace std;
 //    cout<< &a << endl;
 //    return 0;
 // }
+
+
+
+int main(){
+   int x = 10;
+   int* ptr = &x;
+   cout<< ptr << endl;
+   cout<< &x << endl;
+   return 0;
+}
