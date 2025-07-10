@@ -44,3 +44,21 @@ using namespace std;
 //    int* ptr = nullptr;
 //    return 0;
 // }
+
+
+
+
+
+
+// pass by reference
+void swap(int &x, int &y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+int main() {
+    int a = 10, b = 20;
+    swap(a, b);
+    cout << a << " " << b;  // Output: 20 10
+}
