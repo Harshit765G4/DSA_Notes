@@ -44,8 +44,3 @@ using namespace std;
 //    int* ptr = nullptr;
 //    return 0;
 // }
-
-
-
-
-
