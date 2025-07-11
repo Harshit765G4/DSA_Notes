@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 
@@ -1369,20 +1370,52 @@ using namespace std;
 
 
 
-// WAF to Reverse an integer n
+// // WAF to Reverse an integer n
 
-int revInt(int num){
-	int remainder, revInteger = 0;
-	while(num > 0){
-		remainder =	num % 10;
-		num = num / 10;
-		revInteger = (revInteger * 10) + remainder;
-	}
-	return revInteger;
-}
-int main(){
-	int num;
-	cout<<"Enter num: ";
-	cin>>num;
-	cout<<revInt(num)<<endl;
-}
+// int revInt(int num){
+// 	int remainder, revInteger = 0;
+// 	while(num > 0){
+// 		remainder =	num % 10;
+// 		num = num / 10;
+// 		revInteger = (revInteger * 10) + remainder;
+// 	}
+// 	return revInteger;
+// }
+// int main(){
+// 	int num;
+// 	cout<<"Enter num: ";
+// 	cin>>num;
+// 	cout<<revInt(num)<<endl;
+// }
+
+
+
+
+
+
+
+
+
+// // Brute Force Approach Binary Search Algorithm
+// int search(vector<int>& nums, int target) {
+//    int st = 0, end = nums.size() - 1;
+//    while(st <= end){
+//       int mid = (st + end)/2;
+//       if(target > nums[mid]){
+//          st = mid + 1;
+//       } else if(target < nums[mid]){
+// 			st = mid - 1;
+//       } else {
+//          return mid;
+//       }
+//    }
+//    return -1;
+// }
+
+// int main(){
+// 	vector<int> nums = {-1,0,3,4,5,9,12};
+// 	int target = 9;
+
+// 	cout<<search(nums,target)<<endl;
+// 	return 0;
+// }
