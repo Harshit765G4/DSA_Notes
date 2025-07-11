@@ -68,11 +68,27 @@ using namespace std;
 
 
 
-// Array pointer
+// // Array pointer
+// int main(){
+//    int arr[5] = {10, 20, 30, 40, 50};
+
+//    cout << *arr << endl;     // 10
+//    cout << *(arr+1); // 20
+
+// }
+
+
+
+// Pointer Arithmetic
 int main(){
-   int arr[5] = {10, 20, 30, 40, 50};
+   int arr[] = {1,2,3,4,5};
 
-   cout << *arr << endl;     // 10
-   cout << *(arr+1); // 20
+   int a = 10;
+   int *ptr  = &a;
 
+   cout << ptr << endl;
+   ptr = ptr + 2;
+   cout << ptr << endl;
+
+   return 0;
 }
