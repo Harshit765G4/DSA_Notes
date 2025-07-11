@@ -79,16 +79,32 @@ using namespace std;
 
 
 
-// Pointer Arithmetic
+// // Pointer Arithmetic
+// int main(){
+//    int arr[] = {1,2,3,4,5};
+
+//    int a = 10;
+//    int *ptr  = &a;
+
+//    cout << ptr << endl;
+//    ptr = ptr + 2;
+//    cout << ptr << endl;
+
+//    return 0;
+// }
+
+
+
+
+
 int main(){
-   int arr[] = {1,2,3,4,5};
+   int arr[] = {10,20,30,40};
+   int *ptr = arr;
 
-   int a = 10;
-   int *ptr  = &a;
-
-   cout << ptr << endl;
-   ptr = ptr + 2;
-   cout << ptr << endl;
-
+   cout << *ptr <<endl;
+   cout << *(ptr + 1) << endl;
+   cout << *(ptr + 3) << endl;
+   ptr++;
+   cout<< *ptr << endl;
    return 0;
 }
