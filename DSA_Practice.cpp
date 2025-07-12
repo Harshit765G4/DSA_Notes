@@ -1396,7 +1396,7 @@ using namespace std;
 
 
 
-// // Brute Force Approach Binary Search Algorithm
+// // optimal Approach Binary Search Algorithm
 // int search(vector<int>& nums, int target) {
 //    int st = 0, end = nums.size() - 1;
 //    while(st <= end){
@@ -1425,25 +1425,60 @@ using namespace std;
 
 
 
-// Brute Force Approach Binary Search Algorithm on even array
-int search(vector<int>& nums, int target) {
-   int st = 0, end = nums.size() - 1;
-   while(st <= end){
-      int mid = (st + end)/2;
-      if(target > nums[mid]){
-         st = mid + 1;
-      } else if(target < nums[mid]){
-			end = mid - 1;
-      } else {
-         return mid;
-      }
-   }
-   return -1;
-}
+// // optimal Approach Binary Search Algorithm on even array
+// int search(vector<int>& nums, int target) {
+//    int st = 0, end = nums.size() - 1;
+//    while(st <= end){
+//       int mid = (st + end)/2;
+//       if(target > nums[mid]){
+//          st = mid + 1;
+//       } else if(target < nums[mid]){
+// 			end = mid - 1;
+//       } else {
+//          return mid;
+//       }
+//    }
+//    return -1;
+// }
 
-int main(){
-	vector<int> nums = {-1,0,3,5,9,12};
-	int target = 0;
+// int main(){
+	// vector<int> nums = {-1,0,3,5,9,12};
+	// int target = 0;
 
-	cout<<search(nums,target)<<endl;
-}
+	// cout<<search(nums,target)<<endl;
+// }
+
+
+
+
+
+
+// // Binary Search using recursion
+// int recBinarySearch(vector<int> arr, int tar, int st, int end) {
+//    if (st <= end) {
+//       int mid = st + (end - st) / 2;
+//       if (tar > arr[mid]) {
+//          return recBinarySearch(arr, tar, mid + 1, end);
+//       } else if (tar < arr[mid]) {
+//          return recBinarySearch(arr, tar, st, mid - 1);
+//       } else {
+//          return mid;
+//       }
+//    }
+//    return -1;
+// }
+
+// int main() {
+//    vector<int> arr = {-1, 0, 3, 5, 9, 12};
+//    int target = 9;
+
+//    cout << recBinarySearch(arr, target, 0, arr.size() - 1) << endl;
+//    return 0;
+// }
+
+
+
+
+
+
+
