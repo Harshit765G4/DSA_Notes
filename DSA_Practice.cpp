@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
 
 
@@ -1496,12 +1496,32 @@ using namespace std;
 
 
 
-// Pair
+// // Pair
+// int main() {
+//     pair<int, string> p;
+
+//     p.first = 1;
+//     p.second = "Alice";
+
+//     cout << p.first << " " << p.second;
+// }
+
+
+
+
+
+// unordered map
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
 int main() {
-    pair<int, string> p;
+    string s = "banana";
+    unordered_map<char, int> freq;
 
-    p.first = 1;
-    p.second = "Alice";
+    for (char c : s) freq[c]++;
 
-    cout << p.first << " " << p.second;
+    for (auto it = freq.begin(); it != freq.end(); ++it){
+        cout << it->first << ": " << it->second << endl;
+    }
 }
