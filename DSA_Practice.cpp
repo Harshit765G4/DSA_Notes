@@ -1,5 +1,4 @@
-#include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -1481,4 +1480,15 @@ using namespace std;
 
 
 
+// STL
 
+//Deque
+int main() {
+    deque<int> dq = {10, 20, 30};
+
+    dq.push_back(40);   // Insert at end
+    dq.push_front(5);   // Insert at front
+
+    for (int x : dq)
+        cout << x << " ";
+}
