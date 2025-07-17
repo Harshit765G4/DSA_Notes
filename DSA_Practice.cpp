@@ -1482,13 +1482,26 @@ using namespace std;
 
 // STL
 
-//Deque
+// //Deque
+// int main() {
+//     deque<int> dq = {10, 20, 30};
+
+//     dq.push_back(40);   // Insert at end
+//     dq.push_front(5);   // Insert at front
+
+//     for (int x : dq)
+//         cout << x << " ";
+// }
+
+
+
+
+// Pair
 int main() {
-    deque<int> dq = {10, 20, 30};
+    pair<int, string> p;
 
-    dq.push_back(40);   // Insert at end
-    dq.push_front(5);   // Insert at front
+    p.first = 1;
+    p.second = "Alice";
 
-    for (int x : dq)
-        cout << x << " ";
+    cout << p.first << " " << p.second;
 }
