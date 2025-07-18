@@ -1564,3 +1564,27 @@
 //     for (int x : v)
 //         cout << x << " ";
 // }
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+
+int main() {
+    unordered_set<int> uset;
+
+    uset.insert(10);
+    uset.insert(20);
+    uset.insert(10); // Duplicate, ignored
+    uset.insert(5);
+
+    for (int x : uset)
+        cout << x << " ";
+}
