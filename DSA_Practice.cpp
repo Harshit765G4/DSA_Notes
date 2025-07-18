@@ -1613,3 +1613,32 @@
 //     for (int val : ms)
 //         cout << val << " ";
 // }
+
+
+
+
+
+
+
+// lower bound and upper bound
+
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main() {
+    set<int> s = {10, 20, 30, 40, 50};
+
+    auto lb = s.lower_bound(30); // Points to 30
+    auto ub = s.upper_bound(30); // Points to 40
+
+    if (lb != s.end())
+        cout << "Lower Bound of 30: " << *lb << endl;
+    else
+        cout << "Lower Bound of 30: Not found\n";
+
+    if (ub != s.end())
+        cout << "Upper Bound of 30: " << *ub << endl;
+    else
+        cout << "Upper Bound of 30: Not found\n";
+}
