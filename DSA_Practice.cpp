@@ -1532,11 +1532,35 @@
 
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int x = 29; // Binary: 11101 → 4 ones
-    cout << "__builtin_popcount(29): " << __builtin_popcount(x) << endl;
-    return 0;
-}
+// int main() {
+//     int x = 29; // Binary: 11101 → 4 ones
+//     cout << "__builtin_popcount(29): " << __builtin_popcount(x) << endl;
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+// // sort
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main() {
+//     vector<int> v = {4, 2, 8, 1};
+
+//     sort(v.begin(), v.end());
+
+//     for (int x : v)
+//         cout << x << " ";
+// }
