@@ -1572,19 +1572,44 @@
 
 
 
+// // unordered_set
 
-#include <iostream>
-#include <unordered_set>
-using namespace std;
+// #include <iostream>
+// #include <unordered_set>
+// using namespace std;
 
-int main() {
-    unordered_set<int> uset;
+// int main() {
+//     unordered_set<int> uset;
 
-    uset.insert(10);
-    uset.insert(20);
-    uset.insert(10); // Duplicate, ignored
-    uset.insert(5);
+//     uset.insert(10);
+//     uset.insert(20);
+//     uset.insert(10); // Duplicate, ignored
+//     uset.insert(5);
 
-    for (int x : uset)
-        cout << x << " ";
-}
+//     for (int x : uset)
+//         cout << x << " ";
+// }
+
+
+
+
+
+
+
+// // multi_set
+
+// #include <iostream>
+// #include <set>
+// using namespace std;
+
+// int main() {
+//     multiset<int> ms;
+
+//     ms.insert(10);
+//     ms.insert(20);
+//     ms.insert(10); // duplicate allowed
+//     ms.insert(30);
+
+//     for (int val : ms)
+//         cout << val << " ";
+// }
