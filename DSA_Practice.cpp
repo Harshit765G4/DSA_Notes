@@ -1510,18 +1510,33 @@
 
 
 
-// unordered map
+// // unordered map
+// #include <iostream>
+// #include <unordered_map>
+// using namespace std;
+
+// int main() {
+//     string s = "banana";
+//     unordered_map<char, int> freq;
+
+//     for (char c : s) freq[c]++;
+
+//     for (auto it = freq.begin(); it != freq.end(); ++it){
+//         cout << it->first << ": " << it->second << endl;
+//     }
+// }
+
+
+
+
+
+
+
 #include <iostream>
-#include <unordered_map>
 using namespace std;
 
 int main() {
-    string s = "banana";
-    unordered_map<char, int> freq;
-
-    for (char c : s) freq[c]++;
-
-    for (auto it = freq.begin(); it != freq.end(); ++it){
-        cout << it->first << ": " << it->second << endl;
-    }
+    int x = 29; // Binary: 11101 → 4 ones
+    cout << "__builtin_popcount(29): " << __builtin_popcount(x) << endl;
+    return 0;
 }
