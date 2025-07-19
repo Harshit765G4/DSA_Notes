@@ -1742,26 +1742,50 @@
 
 
 
-// Compare Two Strings (Case-Insensitive)
+// // Compare Two Strings (Case-Insensitive)
 
-#include <iostream>
-#include <string>
-#include <cctype>
-using namespace std;
+// #include <iostream>
+// #include <string>
+// #include <cctype>
+// using namespace std;
 
-string toLowerCase(string s) {
-    for (char &c : s) c = tolower(c);
-    return s;
-}
+// string toLowerCase(string s) {
+//     for (char &c : s) c = tolower(c);
+//     return s;
+// }
 
-int main() {
-    string a = "Hello";
-    string b = "hello";
+// int main() {
+//     string a = "Hello";
+//     string b = "hello";
     
-    if (toLowerCase(a) == toLowerCase(b))
-        cout << "Equal (case-insensitive)" << endl;
-    else
-        cout << "Not equal" << endl;
+//     if (toLowerCase(a) == toLowerCase(b))
+//         cout << "Equal (case-insensitive)" << endl;
+//     else
+//         cout << "Not equal" << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+// // Convert to Uppercase
+
+// #include <iostream>
+// #include <string>
+// #include <cctype>
+// using namespace std;
+
+// int main() {
+//     string str = "Hello";
+//     for (char &c : str) {
+//         c = toupper(c);
+//     }
+//     cout << "Uppercase: " << str << endl;
+//     return 0;
+// }
