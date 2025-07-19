@@ -1685,3 +1685,32 @@
 //     cout << s1 << " " << s2 << endl;
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name;
+    cout << "Enter your name: ";
+    getline(cin, name);  // Reads spaces too
+
+    cout << "Hello, " << name << "!" << endl;
+
+    // String operations
+    cout << "Length: " << name.length() << endl;
+    cout << "First letter: " << name[0] << endl;
+    
+    if (name.find("a") != string::npos)
+        cout << "'a' found at: " << name.find("a") << endl;
+
+    return 0;
+}
