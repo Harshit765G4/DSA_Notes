@@ -1721,15 +1721,47 @@
 
 
 
+// // Reverse a string
+// #include <iostream>
+// #include <string>
+// #include <algorithm>
+// using namespace std;
+
+// int main() {
+//     string str = "Hello";
+//     reverse(str.begin(), str.end());
+//     cout << "Reversed: " << str << endl;
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+// Compare Two Strings (Case-Insensitive)
 
 #include <iostream>
 #include <string>
-#include <algorithm>
+#include <cctype>
 using namespace std;
 
+string toLowerCase(string s) {
+    for (char &c : s) c = tolower(c);
+    return s;
+}
+
 int main() {
-    string str = "Hello";
-    reverse(str.begin(), str.end());
-    cout << "Reversed: " << str << endl;
+    string a = "Hello";
+    string b = "hello";
+    
+    if (toLowerCase(a) == toLowerCase(b))
+        cout << "Equal (case-insensitive)" << endl;
+    else
+        cout << "Not equal" << endl;
+
     return 0;
 }
