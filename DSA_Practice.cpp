@@ -1789,3 +1789,40 @@
 //     cout << "Uppercase: " << str << endl;
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "Hello";
+    str += " World";                    // Concatenate
+    str.insert(5, ",");                 // Insert
+    str.replace(6, 5, "Universe");      // Replace "World" with "Universe"
+    str.erase(13, 1);                   // Erase last character
+
+    cout << str << endl;                // Output: Hello,Universe
+
+    if (str.find("Universe") != string::npos)
+        cout << "Found 'Universe'" << endl;
+
+    cout << "Length: " << str.length() << endl;
+    cout << "First char: " << str[0] << endl;
+
+    return 0;
+}
