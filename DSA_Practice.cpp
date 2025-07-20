@@ -1805,24 +1805,54 @@
 
 
 
-#include <iostream>
-#include <string>
-using namespace std;
+// #include <iostream>
+// #include <string>
+// using namespace std;
 
-int main() {
-    string str = "Hello";
-    str += " World";                    // Concatenate
-    str.insert(5, ",");                 // Insert
-    str.replace(6, 5, "Universe");      // Replace "World" with "Universe"
-    str.erase(13, 1);                   // Erase last character
+// int main() {
+//     string str = "Hello";
+//     str += " World";                    // Concatenate
+//     str.insert(5, ",");                 // Insert
+//     str.replace(6, 5, "Universe");      // Replace "World" with "Universe"
+//     str.erase(13, 1);                   // Erase last character
 
-    cout << str << endl;                // Output: Hello,Universe
+//     cout << str << endl;                // Output: Hello,Universe
 
-    if (str.find("Universe") != string::npos)
-        cout << "Found 'Universe'" << endl;
+//     if (str.find("Universe") != string::npos)
+//         cout << "Found 'Universe'" << endl;
 
-    cout << "Length: " << str.length() << endl;
-    cout << "First char: " << str[0] << endl;
+//     cout << "Length: " << str.length() << endl;
+//     cout << "First char: " << str[0] << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+// // Check Palindrome
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// bool isPalindrome(string s) {
+//     int i = 0, j = s.length() - 1;
+//     while (i < j) {
+//         if (s[i] != s[j]) return false;
+//         i++; j--;
+//     }
+//     return true;
+// }
+
+// int main() {
+//     string str = "madam";
+//     cout << (isPalindrome(str) ? "Palindrome" : "Not Palindrome") << endl;
+//     return 0;
+// }
