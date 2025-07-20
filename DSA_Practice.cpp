@@ -1856,3 +1856,30 @@
 //     cout << (isPalindrome(str) ? "Palindrome" : "Not Palindrome") << endl;
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+// // Count Words in a Sentence
+
+// #include <iostream>
+// #include <string>
+// #include <sstream>
+// using namespace std;
+
+// int main() {
+//     string sentence = "I love programming in C++";
+//     stringstream ss(sentence);
+//     string word;
+//     int count = 0;
+
+//     while (ss >> word) count++;
+
+//     cout << "Word count: " << count << endl;
+//     return 0;
+// }
