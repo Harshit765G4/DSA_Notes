@@ -1883,3 +1883,37 @@
 //     cout << "Word count: " << count << endl;
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+
+
+// // Capitalize First Letter of Each Word
+
+// #include <iostream>
+// #include <string>
+// #include <cctype>
+// using namespace std;
+
+// int main() {
+//     string str = "hello world from harshit";
+//     bool cap = true;
+
+//     for (int i = 0; i < str.length(); i++) {
+//         if (isspace(str[i])) {
+//             cap = true;
+//         } else if (cap) {
+//             str[i] = toupper(str[i]);
+//             cap = false;
+//         }
+//     }
+
+//     cout << "Capitalized: " << str << endl;
+//     return 0;
+// }
