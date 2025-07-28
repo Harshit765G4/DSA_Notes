@@ -2543,3 +2543,64 @@
 
 
 
+
+
+
+
+
+
+
+
+// // 150. Evaluate Reverse Polish Notation
+
+// #include <iostream>
+// #include <stack>
+// #include <vector>
+// using namespace std;
+
+// int evalRPN(vector<string>& tokens) {
+//     stack<int> st;
+//     for (string& token : tokens) {
+//         if (token == "+" || token == "-" || token == "*" || token == "/") {
+//             int b = st.top(); st.pop();
+//             int a = st.top(); st.pop();
+//             if (token == "+") st.push(a + b);
+//             else if (token == "-") st.push(a - b);
+//             else if (token == "*") st.push(a * b);
+//             else st.push(a / b);
+//         } else {
+//             st.push(stoi(token));
+//         }
+//     }
+//     return st.top();
+// }
+
+
+
+
+
+
+
+
+
+
+// // 739. Daily Temperatures
+
+// #include <iostream>
+// #include <vector>
+// #include <stack>
+// using namespace std;
+
+// vector<int> dailyTemperatures(vector<int>& temps) {
+//     stack<int> st;
+//     int n = temps.size();
+//     vector<int> res(n, 0);
+//     for (int i = 0; i < n; i++) {
+//         while (!st.empty() && temps[i] > temps[st.top()]) {
+//             int idx = st.top(); st.pop();
+//             res[idx] = i - idx;
+//         }
+//         st.push(i);
+//     }
+//     return res;
+// }
