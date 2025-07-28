@@ -2604,3 +2604,45 @@
 //     }
 //     return res;
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // 856. Score of Parentheses
+
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+
+// int scoreOfParentheses(string s) {
+//     stack<int> st;
+//     for (char c : s) {
+//         if (c == '(') {
+//             st.push(0);
+//         } else {
+//             int val = 0;
+//             while (st.top() != 0) {
+//                 val += st.top();
+//                 st.pop();
+//             }
+//             st.pop(); // pop 0
+//             st.push(val == 0 ? 1 : 2 * val);
+//         }
+//     }
+//     int score = 0;
+//     while (!st.empty()) {
+//         score += st.top();
+//         st.pop();
+//     }
+//     return score;
+// }
