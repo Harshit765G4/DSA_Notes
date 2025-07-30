@@ -2646,3 +2646,39 @@
 //     }
 //     return score;
 // }
+
+
+
+
+
+
+
+
+
+
+// //  Leetcode 125: Valid Palindrome
+
+// #include <cctype>
+// class Solution {
+// public:
+//     bool isPalindrome(string s) {
+//         int left = 0, right = s.length() - 1;
+
+//         while (left < right) {
+//             // Move left pointer if not alphanumeric
+//             while (left < right && !isalnum(s[left])) left++;
+//             // Move right pointer if not alphanumeric
+//             while (left < right && !isalnum(s[right])) right--;
+
+//             // Compare characters (convert both to lowercase)
+//             if (tolower(s[left]) != tolower(s[right])) {
+//                 return false;
+//             }
+
+//             left++;
+//             right--;
+//         }
+
+//         return true;
+//     }
+// };
