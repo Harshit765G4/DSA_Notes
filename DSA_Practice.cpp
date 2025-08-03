@@ -3035,5 +3035,38 @@
 
 
 
+// // 39. Combination Sum
+
+// class Solution {
+// public:
+//     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+//         vector<vector<int>> result;
+//         vector<int> combination;
+//         backtrack(0, candidates, target, combination, result);
+//         return result;
+//     }
+
+//     void backtrack(int start, vector<int>& candidates, int target, 
+//                    vector<int>& combination, vector<vector<int>>& result) {
+//         if (target == 0) {
+//             result.push_back(combination);
+//             return;
+//         }
+
+//         for (int i = start; i < candidates.size(); ++i) {
+//             if (candidates[i] <= target) {
+//                 combination.push_back(candidates[i]);
+//                 backtrack(i, candidates, target - candidates[i], combination, result);
+//                 combination.pop_back();  // backtrack
+//             }
+//         }
+//     }
+// };
+
+
+
+
+
+
 
 
