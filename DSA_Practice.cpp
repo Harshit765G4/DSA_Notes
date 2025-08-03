@@ -2986,3 +2986,54 @@
 //         return result;
 //     }
 // };
+
+
+
+
+
+
+
+
+// // Leetcode Problem 17: Letter Combinations of a Phone Number
+
+// class Solution {
+// public:
+//     vector<string> letterCombinations(string digits) {
+//         if (digits.empty()) return {};
+
+//         vector<string> result;
+//         string combination;
+
+//         unordered_map<char, string> phone = {
+//             {'2', "abc"}, {'3', "def"}, {'4', "ghi"}, {'5', "jkl"},
+//             {'6', "mno"}, {'7', "pqrs"}, {'8', "tuv"}, {'9', "wxyz"}
+//         };
+
+//         backtrack(0, digits, phone, combination, result);
+//         return result;
+//     }
+
+//     void backtrack(int index, string& digits, unordered_map<char, string>& phone,
+//                    string& combination, vector<string>& result) {
+//         if (index == digits.size()) {
+//             result.push_back(combination);
+//             return;
+//         }
+
+//         string letters = phone[digits[index]];
+//         for (char ch : letters) {
+//             combination.push_back(ch);
+//             backtrack(index + 1, digits, phone, combination, result);
+//             combination.pop_back();  // Backtrack
+//         }
+//     }
+// };
+
+
+
+
+
+
+
+
+
