@@ -3587,3 +3587,54 @@
 //         return prev; // New head
 //     }
 // };
+
+
+
+
+
+
+
+
+// // leetcode 506
+
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {1,4,20,3,10,5};
+//     int k = 33;
+//     int count = 0;
+//     for(int i = 0; i < 6; i++) {
+//         int sum = 0;
+//         for(int j = i; j < 6; j++) {
+//             sum += arr[j];
+//             if(sum == k ) {
+//                 count++;
+//             }
+//         }
+//     }
+//     cout << count << endl;
+// }
+
+
+
+
+
+// // move zeros
+
+// #include<iostream>
+// using namespace std;
+// int main() {
+//     int arr[] = {0,1,0,3,12};
+//     int lastNonZero = arr[0];
+//     for(int i = 0; i < 5; i++) {
+//         if(arr[i]!=0){
+//             swap(arr[i],arr[lastNonZero]);
+//             lastNonZero++;
+//         }
+//     }
+//     for(int i = 0; i < 5; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+// }
