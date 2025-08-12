@@ -3669,5 +3669,71 @@
 
 
 
+// // leaders in an array
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int arr[] = {16,17,4,3,5,2};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int max = arr[n-1];
+//     int i = n;
+//     cout << max << " ";
+
+//     while(i>=1){
+//         if(max<arr[i-1]){
+//             max = arr[i-1];
+//             cout << max << " ";
+//         }
+//         i--;
+//     }
+// }
 
 
+
+
+
+
+// Duplicates in array
+
+#include<iostream>
+#include<vector>
+#include<unordered_map>
+#include<algorithm>
+using namespace std;
+
+// vector<int> findDuplicates(int arr[], int n) {
+//     vector<int> duplicates;
+//     for (int i = 1; i < n; ++i) {
+//         if (arr[i] == arr[i - 1] && (duplicates.empty() || duplicates.back() != arr[i])) {
+//             duplicates.push_back(arr[i]);
+//         }
+//     }
+//     return duplicates;
+// }
+
+// int main(){
+//     int arr[] = {2,2,4,6,6,7};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     vector<int> dups = findDuplicates(arr, n);
+//     cout << "Duplicates: ";
+//     for(int x : dups) cout << x << " ";
+//     cout << endl;
+//     return 0;
+// }
+
+
+
+
+int main(){
+    int arr[] = {2,2,4,6,6,7};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int l = 0, r = 5;
+    while(l < r){
+        int mid = l + (r - l) / 2;
+        if(arr[mid] == arr[mid + 1] || arr[mid] == arr[mid - 1]){
+            cout << arr[mid] << " ";
+        }
+    }
+}
