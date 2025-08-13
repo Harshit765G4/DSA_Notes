@@ -2,8 +2,8 @@
 using namespace std;
 
 int main(){
-    int arr[]={3,1,2,2,1,2,3,3,4,5,4,4,6,6,6,4};
-    int k = 8;
+    int arr[]={3,2,3};
+    int k = 3;
     int n = sizeof(arr)/sizeof(arr[0]);
     int nBykTimes = n/k; 
     int count = 0;
