@@ -3697,11 +3697,11 @@
 
 // Duplicates in array
 
-#include<iostream>
-#include<vector>
-#include<unordered_map>
-#include<algorithm>
-using namespace std;
+// #include<iostream>
+// #include<vector>
+// #include<unordered_map>
+// #include<algorithm>
+// using namespace std;
 
 // vector<int> findDuplicates(int arr[], int n) {
 //     vector<int> duplicates;
