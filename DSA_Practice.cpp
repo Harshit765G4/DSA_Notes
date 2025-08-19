@@ -3926,3 +3926,24 @@
 //         return totalWater; 
 //     }
 // };
+
+
+
+
+
+// // Print all pairs of an array → O(n²
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int arr[] = {1, 2, 3, 4};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     for(int i = 0; i < n; i++){
+//         for(int j = 0; j < n; j++){
+//             cout << "(" << arr[i] << ", " << arr[j] << ")" << endl;
+//         }
+//     }
+//     return 0;
+// }
