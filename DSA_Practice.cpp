@@ -3785,3 +3785,107 @@ using namespace std;
 //         return result;
 //     }
 // };
+
+
+
+
+
+
+
+// Leetcode Problem 42: Trapping Rain Water - Brute Force Approach
+
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+//         int arr[] = {4,2,0,3,2,5};
+//         int n = sizeof(arr)/sizeof(arr[0]);     
+
+//         int totalWater = 0;
+//         for(int i = 1; i <= n -2; i++) {
+//                 int leftMax = arr[i];
+//                 for(int j = 0; j < i; j++){
+//                       leftMax = max(leftMax, arr[j]);  
+//                 }
+//                 int rightMAx = arr[i];
+//                 for(int j = i + 1; j < n; j++) {
+//                         rightMAx = max(rightMAx, arr[j]);  
+//                 }
+//                 totalWater += min(leftMax, rightMAx) - arr[i];
+//         }
+//         cout << "Total water trapped: " << totalWater << endl;
+// }
+
+
+
+
+
+
+
+
+
+
+
+// leetcode submission 1
+
+// class Solution {
+// public:
+//     int trap(vector<int>& arr) {
+//         int sz = arr.size();
+//         int totalWater = 0;
+//         for(int i = 1; i <= sz - 2; i++){
+//             int leftMax = arr[i];
+//             for(int j = 0; j < i; j++){
+//                 leftMax = max(leftMax, arr[j]);
+//             }
+//             int rightMax = arr[i];
+//             for(int j = i + 1; j < sz; j++){
+//                 rightMax = max(rightMax, arr[j]);
+//             }
+//             totalWater += min(leftMax, rightMax) - arr[i];
+//         }
+//         return totalWater;
+//     }
+// };
+
+
+
+
+
+
+
+// // optimized  
+
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// int main() {
+//         int arr[] = {4,2,0,3,2,5};
+//         int sz = sizeof(arr) / sizeof(arr[0]);
+
+//         int left = 0, right = sz - 1;
+//         int leftMax = 0, rightMax = 0;
+//         int totalWater = 0;
+
+//         while(left < right) {
+//                 if(arr[left] < arr[right]){
+//                         if(arr[left] >= leftMax) {
+//                                 leftMax = arr[left];
+//                         } else {
+//                                 totalWater += leftMax - arr[left];
+//                         }
+//                         left++;
+//                 } else {
+//                         if(arr[right] >= rightMax) {
+//                                 rightMax = arr[right];
+//                         } else {
+//                                 totalWater += rightMax - arr[right];
+//                         }
+//                         right--;
+//                 }
+//         }
+//         cout << "Total water trapped: " << totalWater << endl;
+//         return 0;
+// }
