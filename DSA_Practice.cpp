@@ -3973,3 +3973,111 @@
 //     }
 //     return 0;
 // }
+
+
+
+
+
+
+
+// // merge two sorted arrays
+
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr1[] = {1, 2, 3, 4, 5};
+//     int arr2[] = {6, 7, 8, 9, 10};
+//     int n1 = sizeof(arr1) / sizeof(arr1[0]);
+//     int n2 = sizeof(arr2) / sizeof(arr2[0]);
+
+//     int idx = n1 + n2 - 1;
+//     int i = n1 - 1, j = n2 - 1;
+//     while(i >= 0 && j >= 0) {
+//         if(arr1[i] > arr2[j]) {
+//             arr1[idx--] = arr1[i--];
+//         } else {
+//             arr1[idx--] = arr2[j--];
+//         }
+//     }
+// }
+
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr1[] = {1, 2, 3, 4, 5};
+//     int arr2[] = {6, 7, 8, 9, 10};
+//     int n1 = sizeof(arr1) / sizeof(arr1[0]);
+//     int n2 = sizeof(arr2) / sizeof(arr2[0]);
+
+//     int merged[n1 + n2];
+//     int i = n1 - 1, j = n2 - 1, idx = n1 + n2 - 1;
+
+//     while(i >= 0 && j >= 0) {
+//         if(arr1[i] > arr2[j]) {
+//             merged[idx--] = arr1[i--];
+//         } else {
+//             merged[idx--] = arr2[j--];
+//         }
+//     }
+//     while(i >= 0) merged[idx--] = arr1[i--];
+//     while(j >= 0) merged[idx--] = arr2[j--];
+
+//     cout << "Merged array: ";
+//     for(int k = 0; k < n1 + n2; k++) {
+//         cout << merged[k] << " ";
+//     }
+//     cout << endl;
+
+//     int n = n1 + n2;
+
+//     if(n%2==1){
+//         cout << "Median: " << merged[n/2] << endl;
+//     }
+//     else {
+//         cout << "Median: " << (merged[n/2 - 1] + merged[n/2]) / 2.0 << endl;
+//     }
+
+
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main() {
+    vector<int> nums = {2,7,11,15};
+    int target = 9;
+
+    int sz = nums.size();
+    int i = 0, j = sz -1;
+
+    while(i < j) {
+        if(nums[i] + nums[j] == target) {
+            cout << i << " " << j << endl;
+            return 0;
+        } else {
+            if(nums[i] + nums[j] < target) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+    }
+}
