@@ -4081,3 +4081,33 @@ int main() {
         }
     }
 }
+
+
+
+
+
+
+
+
+// // 167. Two Sum II - Input Array Is Sorted
+
+// class Solution {
+// public:
+//     vector<int> twoSum(vector<int>& nums, int target) {
+//         int sz = nums.size();
+//         int i = 0, j =  sz - 1;
+
+//         while(i<j){
+//             if(nums[i] + nums[j] == target){
+//                 return {i+1, j+1};
+//             } else {
+//                 if(nums[i] + nums[j] < target){
+//                     i++;
+//                 } else {
+//                     j--;
+//                 }
+//             }
+//         }
+//         return {};
+//     }
+// };
