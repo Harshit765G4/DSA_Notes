@@ -4056,31 +4056,31 @@
 
 
 
-#include<iostream>
-#include<vector>
-#include<algorithm>
-using namespace std;
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
 
-int main() {
-    vector<int> nums = {2,7,11,15};
-    int target = 9;
+// int main() {
+//     vector<int> nums = {2,7,11,15};
+//     int target = 9;
 
-    int sz = nums.size();
-    int i = 0, j = sz -1;
+//     int sz = nums.size();
+//     int i = 0, j = sz -1;
 
-    while(i < j) {
-        if(nums[i] + nums[j] == target) {
-            cout << i << " " << j << endl;
-            return 0;
-        } else {
-            if(nums[i] + nums[j] < target) {
-                i++;
-            } else {
-                j--;
-            }
-        }
-    }
-}
+//     while(i < j) {
+//         if(nums[i] + nums[j] == target) {
+//             cout << i << " " << j << endl;
+//             return 0;
+//         } else {
+//             if(nums[i] + nums[j] < target) {
+//                 i++;
+//             } else {
+//                 j--;
+//             }
+//         }
+//     }
+// }
 
 
 
@@ -4111,3 +4111,50 @@ int main() {
 //         return {};
 //     }
 // };
+
+
+
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[10] = {1, 2, 3, 4, 5};
+//     int n = 5, pos = 2, element = 99;
+
+//     // shift elements to right
+//     for(int i = n; i > pos; i--){
+//         arr[i] = arr[i-1];
+//     }
+//     arr[pos] = element;
+//     n++;
+
+//     for(int i = 0; i < n; i++) cout << arr[i] << " ";
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[10] = {1, 2, 3, 4, 5};
+    int n = 5, pos = 2;
+
+    for(int i = pos; i < n-1; i++){
+        arr[i] = arr[i+1];
+    }
+    n--;
+
+    for(int i = 0; i < n; i++) cout << arr[i] << " ";
+    return 0;
+}
