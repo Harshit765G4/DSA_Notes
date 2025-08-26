@@ -4143,18 +4143,42 @@
 
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int arr[10] = {1, 2, 3, 4, 5};
-    int n = 5, pos = 2;
+// int main() {
+//     int arr[10] = {1, 2, 3, 4, 5};
+//     int n = 5, pos = 2;
 
-    for(int i = pos; i < n-1; i++){
-        arr[i] = arr[i+1];
-    }
-    n--;
+//     for(int i = pos; i < n-1; i++){
+//         arr[i] = arr[i+1];
+//     }
+//     n--;
 
-    for(int i = 0; i < n; i++) cout << arr[i] << " ";
-    return 0;
-}
+//     for(int i = 0; i < n; i++) cout << arr[i] << " ";
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+// // Climing Stairs
+
+// class Solution {
+// public:
+//     int climbStairs(int n) {
+//         if (n <= 2) return n;   // base cases
+        
+//         int first = 1, second = 2;  // f(1) = 1, f(2) = 2
+//         for (int i = 3; i <= n; i++) {
+//             int next = first + second; // f(i) = f(i-1) + f(i-2)
+//             first = second;
+//             second = next;
+//         }
+//         return second;
+//     }
+// };
