@@ -4182,3 +4182,63 @@
 //         return second;
 //     }
 // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1792. Maximum Average Pass Ratio
+
+#include <vector>
+#include <queue>
+using namespace std;
+
+class Solution {
+public:
+    struct ClassInfo {
+        int pass, total;
+        double gain;
+        ClassInfo(int p, int t) : pass(p), total(t) {
+            gain = ((double)(p + 1) / (t + 1)) - ((double)p / t);
+        }
+        // For max heap
+        bool operator<(const ClassInfo& other) const {
+            return gain < other.gain;
+        }
+    };
+
+    double maxAverageRatio(vector<vector<int>>& classes, int extraStudents) {
+        priority_queue<ClassInfo> pq;
+        
+        // Initialize heap with all classes
+        for (auto& c : classes) {
+            pq.emplace(c[0], c[1]);
+        }
+        
+        // Distribute extra students greedily
+        while (extraStudents--) {
+            auto top = pq.top(); pq.pop();
+            top.pass++;
+            top.total++;
+            top.gain = ((double)(top.pass + 1) / (top.total + 1)) - ((double)top.pass / top.total);
+            pq.push(top);
+        }
+        
+        // Compute final average
+        double sum = 0.0;
+        while (!pq.empty()) {
+            auto cur = pq.top(); pq.pop();
+            sum += (double)cur.pass / cur.total;
+        }
+        
+        return sum / classes.size();
+    }
+};
