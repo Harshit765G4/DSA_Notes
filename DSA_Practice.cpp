@@ -4242,3 +4242,43 @@
 //         return sum / classes.size();
 //     }
 // };
+
+
+
+
+
+
+
+// 3025. Find the Number of Ways to Place People I
+class Solution {
+public:
+    int numberOfPairs(vector<vector<int>>& points) {
+        int n = points.size();
+        int ans = 0;
+        
+        // check all pairs
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == j) continue;
+                int xi = points[i][0], yi = points[i][1];
+                int xj = points[j][0], yj = points[j][1];
+                
+                // A must be strictly top-left of B
+                if (xi < xj && yi < yj) {
+                    bool ok = true;
+                    // check if any point lies in rectangle
+                    for (int k = 0; k < n; k++) {
+                        if (k == i || k == j) continue;
+                        int xk = points[k][0], yk = points[k][1];
+                        if (xi <= xk && xk <= xj && yi <= yk && yk <= yj) {
+                            ok = false;
+                            break;
+                        }
+                    }
+                    if (ok) ans++;
+                }
+            }
+        }
+        return ans;
+    }
+};
