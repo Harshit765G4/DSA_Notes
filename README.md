@@ -7,4 +7,4 @@ Currently solving some leetcode question so no new update on lazyLogic
 
 Currently studying strings
 
-22BTCSECS0001 
+today I solved leetcode 3516 find the closest person problem
