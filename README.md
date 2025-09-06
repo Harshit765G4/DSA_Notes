@@ -31,3 +31,10 @@ class Solution {
     return -1;
   }
 };
+
+
+
+
+
+today I solved 
+3495. Minimum Operations to Make Aray Elements Zero
