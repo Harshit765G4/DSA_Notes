@@ -470,4 +470,63 @@ public:
  * obj->edit(taskId,newPriority);
  * obj->rmv(taskId);
  * int param_4 = obj->execTop();
+ */__
+ 
+
+
+class Spreadsheet {
+private:
+    // Hash map to store cell values with cell name as key
+    unordered_map<string, int> cellValues;
+
+public:
+    // Constructor: Initialize spreadsheet with given number of rows
+    // Note: rows parameter is not used in this implementation
+    Spreadsheet(int rows) {
+        // No initialization needed for the hash map
+    }
+
+    // Set the value of a specific cell
+    void setCell(string cell, int value) {
+        cellValues[cell] = value;
+    }
+
+    // Reset a cell by removing it from the spreadsheet
+    void resetCell(string cell) {
+        cellValues.erase(cell);
+    }
+
+    // Calculate and return the value based on the given formula
+    // Formula format: "=cell1+cell2+...+celln" or "=value1+value2+...+valuen"
+    // Can also be a mix of cells and numeric values
+    int getValue(string formula) {
+        int result = 0;
+      
+        // Remove the '=' prefix and create a string stream for parsing
+        stringstream formulaStream(formula.substr(1));
+        string token;
+      
+        // Parse the formula by splitting on '+' delimiter
+        while (getline(formulaStream, token, '+')) {
+            // Check if token is a numeric value
+            if (isdigit(token[0])) {
+                // Convert string to integer and add to result
+                result += stoi(token);
+            } else {
+                // Token is a cell reference
+                // Add cell value if it exists, otherwise add 0
+                result += cellValues.count(token) ? cellValues[token] : 0;
+            }
+        }
+      
+        return result;
+    }
+};
+
+/**
+ * Your Spreadsheet object will be instantiated and called as such:
+ * Spreadsheet* obj = new Spreadsheet(rows);
+ * obj->setCell(cell,value);
+ * obj->resetCell(cell);
+ * int param_3 = obj->getValue(formula);
  */
