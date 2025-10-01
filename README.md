@@ -2,6 +2,27 @@
 
 class Solution {
 public:
+    int numWaterBottles(int numBottles, int numExchange) {
+        // Initialize the answer with the initial number of full bottles (all can be drunk)
+        int totalDrunk = numBottles;
+      
+        // Keep exchanging empty bottles for new full bottles while we have enough empties
+        // Each iteration: we exchange 'numExchange' empty bottles for 1 full bottle
+        // This means we effectively reduce empty bottles by (numExchange - 1)
+        // The new full bottle gets drunk immediately, so we increment totalDrunk
+        while (numBottles >= numExchange) {
+            // Reduce empty bottles by (numExchange - 1) since we trade numExchange for 1
+            numBottles -= (numExchange - 1);
+            // Increment total drunk bottles by 1 (the new bottle we got from exchange)
+            totalDrunk++;
+        }
+      
+        return totalDrunk;
+    }
+};
+
+class Solution {
+public:
     int triangularSum(vector<int>& nums) {
         // Iterate through levels of the triangle from bottom to top
         // k represents the current size of the array we're processing
