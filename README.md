@@ -2,6 +2,25 @@
 
 class Solution {
 public:
+    int maxBottlesDrunk(int numBottles, int numExchange) {
+        // Initialize total bottles drunk with initial full bottles
+        int totalBottlesDrunk = numBottles;
+      
+        // Keep exchanging empty bottles for full ones while possible
+        while (numBottles >= numExchange) {
+            // Exchange empty bottles for one full bottle
+            numBottles -= numExchange;  // Use empty bottles for exchange
+            ++numExchange;               // Exchange rate increases by 1 each time
+            ++totalBottlesDrunk;         // Drink the newly obtained full bottle
+            ++numBottles;                // Add the empty bottle from drinking
+        }
+      
+        return totalBottlesDrunk;
+    }
+};
+
+class Solution {
+public:
     int numWaterBottles(int numBottles, int numExchange) {
         // Initialize the answer with the initial number of full bottles (all can be drunk)
         int totalDrunk = numBottles;
