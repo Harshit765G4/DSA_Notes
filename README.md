@@ -1,17 +1,5 @@
 # DSA
 
-class Solution {
- public:
-  int magicalSum(int m, int k, vector<int>& nums) {
-    const vector<vector<int>> comb = getComb(m, m);
-    vector<vector<vector<vector<int>>>> mem(
-        m + 1, vector<vector<vector<int>>>(
-                   k + 1, vector<vector<int>>(nums.size() + 1,
-                                              vector<int>(m + 1, -1))));
-    return dp(m, k, 0, 0, nums, mem, comb);
-  }
-
- private:
   static constexpr int kMod = 1'000'000'007;
 
   int dp(int m, int k, int i, unsigned carry, const vector<int>& nums,
