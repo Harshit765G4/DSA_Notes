@@ -2,6 +2,18 @@
 
 class Solution {
  public:
+  int finalValueAfterOperations(vector<string>& operations) {
+    int ans = 0;
+
+    for (const string& op : operations)
+      ans += op[1] == '+' ? 1 : -1;
+
+    return ans;
+  }
+};
+
+class Solution {
+ public:
   string findLexSmallestString(string s, int a, int b) {
     string ans = s;
 
