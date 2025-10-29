@@ -2,6 +2,18 @@
 
 class Solution {
  public:
+  int smallestNumber(int n) {
+    return (1 << bitLength(n)) - 1;
+  }
+
+ private:
+  int bitLength(int n) {
+    return 32 - __builtin_clz(n);
+  }
+};
+
+class Solution {
+ public:
   int countValidSelections(vector<int>& nums) {
     const int n = nums.size();
     int ans = 0;
