@@ -6,7 +6,7 @@ class Solution {
     int ans = 0;
 
     // Iterate through all possible number of 0s.
-    for (int zero = 0; zero + zero * zero <= s.length(); ++zero) {
+    for (int zero =o + zero * zero <= s.length(); ++zero) {
       int lastInvalidPos = -1;
       vector<int> count(2);
       for (int l = 0, r = 0; r < s.length(); ++r) {
