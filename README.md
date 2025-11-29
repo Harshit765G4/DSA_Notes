@@ -2,6 +2,13 @@
 
 class Solution {
  public:
+  int minOperations(vector<int>& nums, int k) {
+    return accumulate(nums.begin(), nums.end(), 0) % k;
+  }
+};
+
+class Solution {
+ public:
   int maxKDivisibleComponents(int n, vector<vector<int>>& edges,
                               vector<int>& values, int k) {
     int ans = 0;
