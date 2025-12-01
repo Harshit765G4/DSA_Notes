@@ -1,4 +1,131 @@
+// DS5160 + PCA9685 control for Arduino Mega
+// Uses Adafruit_PWMServoDriver (install via Library Manager)
+// Wiring reminder:
+// Mega SDA (20) -> PCA9685 SDA
+// Mega SCL (21) -> PCA9685 SCL
+// Mega 5V -> PCA9685 VCC
+// Mega GND -> PCA9685 GND (common with battery -)
+// Battery + -> PCA9685 V+ (servo power rail)
+// Battery - -> PCA9685 GND
+
+#include <Wire.h>
+#include <Adafruit_PWMServoDriver.h>
+
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(); // default I2C addr 0x40
+
+// PCA9685 resolution
+const uint16_t PCA_RES = 4096;
+
+// Servo timing - adjust if needed for your DS5160.
+// DS5160 safe typical range: ~600us - 2400us (check your servo docs; this is conservative)
+const uint16_t SERVO_MIN_US = 600;   // pulse width for 0 degrees (microseconds)
+const uint16_t SERVO_MAX_US = 2400;  // pulse width for 180 degrees (microseconds)
+const uint16_t SERVO_FREQ = 50;      // 50Hz for hobby servos
+
+// Convert microseconds to PCA9685 ticks
+uint16_t microsecondsToTicks(uint16_t microsec) {
+  // One PWM period in microseconds = 1,000,000 / SERVO_FREQ
+  float period_us = 1000000.0f / float(SERVO_FREQ);
+  // ticks = (microsec / period_us) * PCA_RES
+  float ticks = (float(microsec) / period_us) * float(PCA_RES);
+  uint16_t t = (uint16_t) constrain(round(ticks), 0, PCA_RES - 1);
+  return t;
+}
+
+// Set servo by microseconds on channel (0..15)
+void setServoMicroseconds(uint8_t channel, uint16_t microsec) {
+  uint16_t ticks = microsecondsToTicks(microsec);
+  pwm.setPWM(channel, 0, ticks); // on=0, off=ticks
+}
+
+// Set servo by angle (0..180)
+void setServoAngle(uint8_t channel, float angle) {
+  angle = constrain(angle, 0.0f, 180.0f);
+  uint16_t pulse = map((int)angle, 0, 180, SERVO_MIN_US, SERVO_MAX_US);
+  setServoMicroseconds(channel, pulse);
+}
+
+// Smooth move: from current pulse to target pulse in 'steps' increments with delayMs between steps
+void smoothMoveMicroseconds(uint8_t channel, uint16_t from_us, uint16_t to_us, uint16_t steps=30, uint16_t delayMs=15) {
+  if (steps == 0) steps = 1;
+  float stepVal = float(to_us - from_us) / float(steps);
+  float cur = from_us;
+  for (uint16_t i = 0; i <= steps; ++i) {
+    setServoMicroseconds(channel, (uint16_t)round(cur));
+    cur += stepVal;
+    delay(delayMs);
+  }
+}
+
+// Fast jump to extremes (useful to exercise full torque briefly). Beware of high current draw.
+void fullPowerJumpTest(uint8_t channel, uint8_t repeats = 6, uint16_t holdMs = 600) {
+  uint16_t minP = SERVO_MIN_US;
+  uint16_t maxP = SERVO_MAX_US;
+  for (uint8_t i = 0; i < repeats; ++i) {
+    setServoMicroseconds(channel, minP);
+    delay(holdMs);
+    setServoMicroseconds(channel, maxP);
+    delay(holdMs);
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println("PCA9685 DS5160 Test - Starting...");
+  Wire.begin(); // Mega uses default pins, SDA=20,SCL=21
+
+  pwm.begin();
+  pwm.setPWMFreq(SERVO_FREQ); // Analog servos: 50 Hz
+  delay(10);
+
+  // Optional: set all channels off initially
+  for (uint8_t ch = 0; ch < 16; ++ch) {
+    pwm.setPWM(ch, 0, 0);
+  }
+
+  Serial.println("Ready. Make sure battery is connected to V+ and GND and common ground with Arduino.");
+  delay(500);
+}
+
+void loop() {
+  // Example behavior: test on channel 0
+  const uint8_t servoChannel = 0;
+
+  // 1) Gentle sweep across the range smoothly
+  Serial.println("Smooth sweep 0->180");
+  smoothMoveMicroseconds(servoChannel, SERVO_MIN_US, SERVO_MAX_US, 80, 12); // slower smooth sweep
+  delay(250);
+  Serial.println("Smooth sweep 180->0");
+  smoothMoveMicroseconds(servoChannel, SERVO_MAX_US, SERVO_MIN_US, 80, 12);
+  delay(500);
+
+  // 2) Quick large steps (fast moves)
+  Serial.println("Fast steps");
+  setServoMicroseconds(servoChannel, (SERVO_MIN_US + SERVO_MAX_US)/2); // center
+  delay(300);
+  setServoMicroseconds(servoChannel, SERVO_MIN_US); // extreme
+  delay(200);
+  setServoMicroseconds(servoChannel, SERVO_MAX_US); // other extreme
+  delay(200);
+
+  // 3) Full-power jump test - USE WITH CAUTION (brief high currents)
+  Serial.println("Full-power jump test (brief) - CAUTION");
+  fullPowerJumpTest(servoChannel, 4, 400); 
+  delay(1000);
+
+  // 4) Hold center
+  Serial.println("Holding center");
+  setServoMicroseconds(servoChannel, (SERVO_MIN_US + SERVO_MAX_US)/2);
+  delay(3000);
+
+  // Repeat loop - adjust as needed or replace with your control logic
+}
+
+
 # DSA
+
+
+
 
 class Solution {
  public:
