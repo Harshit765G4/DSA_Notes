@@ -1,4 +1,3 @@
-// DS5160 + PCA9685 control for Arduino Mega
 // Uses Adafruit_PWMServoDriver (install via Library Manager)
 // Wiring reminder:
 // Mega SDA (20) -> PCA9685 SDA
